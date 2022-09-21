@@ -2,6 +2,7 @@
     --bs-primary: #545454;
     --bs-secondary: #2F170F;
     --oceanblue: #d1f0ea;
+    --oceanblue-transparent: #d1f0ea99;
     --golden: #d8ad64;
     --lightgrey: #657270;
     --brown: #624f3b;
@@ -12,6 +13,10 @@
 
 body {
     background-color: var(--sand);
+    background-image: linear-gradient(#fbf7f590, #fbf7f590), url("../assets/img/white-waves.png");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
     color: var(--bs-primary);
 }
 .text-primary {
@@ -90,7 +95,7 @@ header {
     }
   }
   .page-section{
-    background-color: var(--oceanblue);
-    margin: 5rem 0;
+    background-color: var(--oceanblue-transparent);
+    margin: 5rem 0 0;
     padding: 2rem 0 10rem;
   }
