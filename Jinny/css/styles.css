@@ -38,7 +38,7 @@ body {
     color: var(--golden);
 }
 h2{
-  margin:4rem 0 2rem;
+  margin: 0 0 2rem;
 }
 
 header {
@@ -94,6 +94,7 @@ header {
       /* width: 75%; */
       height: 75vh;
       float: right;
+      padding-bottom: 5rem;
     }
     .intro .intro-text {
       left: 0;
@@ -116,7 +117,7 @@ header {
   .page-section{
     background-color: var(--oceanblue-transparent);
     margin: 0;
-    padding: 2rem 0 10rem;
+    padding: 4rem 0 10rem;
   }
 @media (min-width: 992px) {
   .about-heading .about-heading-img {
