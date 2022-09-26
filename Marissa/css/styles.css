@@ -99,3 +99,20 @@ header {
     margin: 5rem 0 0;
     padding: 2rem 0 10rem;
   }
+
+/** Needs to be moved to Real file per Marissa's stuff**/
+
+.card-text{
+  padding: .5rem;
+  margin: .5rem
+}
+.card-group {
+  @extend .card-group;
+  gap: $spacer * 2; // create a gutter
+
+ 
+  //* optionally change the breakpoint for column layout on mobile*//
+  @include media-breakpoint-down(md){
+      flex-direction: column;
+  }
+}
