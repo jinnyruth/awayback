@@ -38,35 +38,22 @@
         <section class="clearfix">
             
 <div class="container-md">
-    <div class="width: 30rem"></div>
+    <div class="col-xl-10 mx-auto">
 
-    <!-- Contact form -->
-    <form id="contactForm">
+    <form action="mail.php" method="POST">
+        <p>Name</p> <input type="text" name="name">
+        <p>Email</p> <input type="text" name="email">
+        <p>Phone</p> <input type="text" name="phone">
+        <br><br>
+        <p>Request Phone Call:</p>
+        Yes:<input type="checkbox" value="Yes" name="call"><br />
+        No:<input type="checkbox" value="No" name="call"><br />
+        <br>   
 
-        <!-- Name-->
-        <div class="mb-3">
-          <label class="form-label" for="name">Your Name</label>
-          <input class="form-control" id="name" type="text" placeholder="Full name" data-sb-validations="required" />
-        </div>
-    
-        <!-- Email-->
-        <div class="mb-3">
-          <label class="form-label" for="emailAddress">Email Address</label>
-          <input class="form-control" id="emailAddress" type="email" placeholder="Email Address" data-sb-validations="required, email" />
-        </div>
-    
-        <!-- Message-->
-        <div class="mb-3">
-          <label class="form-label" for="message">Message</label>
-          <textarea class="form-control" id="message" type="text" placeholder="Message" style="height: 10rem;" data-sb-validations="required"></textarea>
-        </div>
-    
-        <!-- Submit -->
-        <div class="d-grid">
-          <button class="btn btn-primary btn-lg" type="submit">Submit</button>
-        </div>
-    
-      </form>
+        
+        <p><b>Message</b></p><textarea name="message" rows="6" cols="25"></textarea><br />
+        <input type="submit" value="Send"><input type="reset" value="Clear">
+        </form>
     
     </div>
 
