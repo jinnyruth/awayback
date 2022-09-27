@@ -160,3 +160,8 @@ header {
     right: 0;
   }
 }
+card-text{
+  padding: .5rem;
+  margin: .5rem;
+}
+ 
