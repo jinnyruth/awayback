@@ -36,26 +36,62 @@
             </div>
         </nav>
         <section class="clearfix">
-            
-<div class="container-md">
-    <div class="col-xl-10 mx-auto">
+            <div class="container">
+                <div class="intro">
+                    <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+                        <h2>Contact Information</h2>
+                        <p>
+                            <b>Phone:</b> (435) 220-7005<br>
+                            <b>Email:</b> awaybackcounseling@gmail.com<br>
 
-    <form action="mail.php" method="POST">
-        <p>Name</p> <input type="text" name="name">
-        <p>Email</p> <input type="text" name="email">
-        <p>Phone</p> <input type="text" name="phone">
-        <br><br>
-        <p>Request Phone Call:</p>
-        Yes:<input type="checkbox" value="Yes" name="call"><br />
-        No:<input type="checkbox" value="No" name="call"><br />
-        <br>   
-
+                        </p>
+                       
+                        <h4 class="section-heading mb-4">
+                            <span class="section-heading-upper">Contact Us</span>
+                        </h4>
+                        <form id="contactForm">
+                            <!-- Name-->
+                            <div class="mb-3">
+                              <label class="form-label" for="name">Your Name</label>
+                              <input class="form-control" id="name" type="text" placeholder="Full name" data-sb-validations="required" />
+                            </div>
+                        
+                            <!-- Email-->
+                            <div class="mb-3">
+                              <label class="form-label" for="emailAddress">Email Address</label>
+                              <input class="form-control" id="emailAddress" type="email" placeholder="Email Address" data-sb-validations="required, email" />
+                            </div>
+                        
+                            <!-- Message-->
+                            <div class="mb-3">
+                              <label class="form-label" for="message">Message</label>
+                              <textarea class="form-control" id="message" type="text" placeholder="Message" style="height: 10rem;" data-sb-validations="required"></textarea>
+                            </div>
+                        
+                            <!-- Submit -->
+                            <div class="d-grid">
+                              <button class="btn btn-primary btn-lg" type="submit">Submit</button>
+                            </div>
+                        
+                          </form>
+                      
+                    </div>
+                    <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="assets/img/zion.png" alt="Zion's National Park" />
+                    
+                </div>
+            </div>
+        </section>
         
-        <p><b>Message</b></p><textarea name="message" rows="6" cols="25"></textarea><br />
-        <input type="submit" value="Send"><input type="reset" value="Clear">
-        </form>
-    
-    </div>
+        <section class="clearfix">
+            <div class="container py-4">
+                <div class="width: 40rem">
+
+                   
+            </div>
+              </div>
+              
+              <!-- SB Forms JS -->
+              <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
 
  
   
