@@ -12,34 +12,47 @@
        <link href="css/styles.css" rel="stylesheet" />
     </head>
     <body>
-        <header>
+    <header>
+            <div id="siteTitle" class="col-xl-9 col-log-10 mx-auto  d-flex justify-content-center d-md-none">
             <h1 class="site-heading text-center d-none d-lg-block text-uppercase">
-                <img src="assets/img/compass.png" class="logo";>
-                <span class="site-heading-upper text-primary">A Way Back </span>
-                <span class="site-heading-lower">Counseling</span>
+                <span class="logo-left">
+                    <img src="assets/img/compass.png" class="logo">
+                </span><span class="siteName-right">
+                    <span class="site-heading-upper text-primary">A Way Back </span>
+                    <span class="site-heading-lower">Counseling</span>
+            </span>
             </h1>
+        </div>
         </header>
         <!-- Navigation-->
         <nav class="navbar navbar-expand-md navbar-light py-lg-4" id="mainNav">
-        <div class="container">
-            <a class="navbar-brand  fw-bold d-lg-none" href="index.html"><img src="assets/img/compass.png"
-                    width="40px"> A Way Back Counseling</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item px-lg-4"><a class="nav-link" href="index.html">HOME</a></li>
-                    <li class="nav-item px-lg-4"><a class="nav-link" href="about.html">ABOUT</a></li>
-                    <li class="nav-item px-lg-4"><a class="nav-link" href="services.html">SERVICES</a>
-                    </li>
-                    <li class="nav-item px-lg-4"><a class="nav-link" href="faq.html">FAQs</a></li>
-                    <li class="nav-item px-lg-4"><a class="nav-link" href="contact.html">CONTACT US</a>
-                    </li>
-                </ul>
+            <div class="container">
+                <a class="navbar-brand  fw-bold d-lg-none" href="index.html"><img src="assets/img/compass.png"
+                        width="40px"> A Way Back Counseling</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto">
+                        
+                        <li class="nav-item px-lg-4"><a class="nav-link" href="about.html">ABOUT</a></li>
+                        <li class="nav-item px-lg-4"><a class="nav-link" href="services.html">SERVICES</a>
+                        </li>
+                        <li class="nav-item px-lg-4">
+                            <h1 class="site-heading text-center d-none d-lg-block text-uppercase">
+                            <span class="logo-left">
+                            <img src="assets/img/compass.png" class="logo";>
+                            </span>
+                            <span class="siteName-right">
+                            <a class="nav-link" href="index.html"><span class="site-heading-upper text-primary">A WAY BACK</span> <span class="site-heading-lower">COUNSELING</span></a></span></h1>
+                        </li>
+                        <li class="nav-item px-lg-4"><a class="nav-link" href="faq.html">FAQs</a></li>
+                        <li class="nav-item px-lg-4"><a class="nav-link" href="contact.html">CONTACT US</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
         <section class="clearfix">
             <div class="container">
                 <div class="intro">
