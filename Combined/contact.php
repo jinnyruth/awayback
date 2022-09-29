@@ -43,6 +43,7 @@
                         <p>
                             <b>Phone:</b> (435) 220-7005<br>
                             <b>Email:</b> awaybackcounseling@gmail.com<br>
+                            <b>Address:</b> 85 North 300 West, Suite 8, Washington, Utah 84780.
 
                         </p>
                        

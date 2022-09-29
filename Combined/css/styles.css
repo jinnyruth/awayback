@@ -176,3 +176,6 @@ card-text{
 h4 {
   margin-top: 2em;
 }
+.thumbnail {
+  margin: 10px 0;
+}
