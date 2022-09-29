@@ -29,7 +29,7 @@
                         <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="index.html">Home</a></li>
                         <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="about.html">About</a></li>
                         <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="services.html">Services</a></li>
-                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="faq.html">FAQ</a></li>
+                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="faq.html">FAQs</a></li>
                         <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="contact.php">Contact Us</a></li>
                     </ul>
                 </div>
