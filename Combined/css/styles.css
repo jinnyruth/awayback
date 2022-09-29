@@ -172,3 +172,7 @@ card-text{
 .accordion-button:focus {
   border-color: var(--bs-primary);
 }
+
+h4 {
+  margin-top: 2em;
+}
