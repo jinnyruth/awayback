@@ -179,3 +179,8 @@ h4 {
 .thumbnail {
   margin: 10px 0;
 }
+
+.card-text{
+  padding: .5rem;
+  margin: .5rem
+}

@@ -4,7 +4,6 @@ if($_POST) {
     $visitor_name = "";
     $visitor_email = "";
     $email_title = "";
-    $concerned_department = "";
     $visitor_message = "";
     $email_body = "<div>";
       
