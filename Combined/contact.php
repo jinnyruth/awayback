@@ -29,7 +29,7 @@
                         <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="index.html">Home</a></li>
                         <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="about.html">About</a></li>
                         <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="services.html">Services</a></li>
-                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="faq.html">FAQ</a></li>
+                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="faq.html">FAQs</a></li>
                         <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="contact.php">Contact Us</a></li>
                     </ul>
                 </div>
@@ -43,6 +43,7 @@
                         <p>
                             <b>Phone:</b> (435) 220-7005<br>
                             <b>Email:</b> awaybackcounseling@gmail.com<br>
+                            <b>Address:</b> 85 North 300 West, Suite 8, Washington, Utah 84780.
 
                         </p>
                        
