@@ -149,15 +149,19 @@ header {
   .about .about-text {    
     width: 80%;
     float: right;
+    padding: 3rem 300px 3rem 3rem;
   }
 }
  @media (min-width: 1200px) {
   .about .about-text {
-    width: 60%;
+    width: 70%;
+    padding-right: 150px;
+    
   }
   .about .about-img {
     position: absolute;
     right: 0;
+    top: 5em;
   }
 }
 card-text{
@@ -183,4 +187,7 @@ h4 {
 .card-text{
   padding: .5rem;
   margin: .5rem
+}
+.blue-back {
+  background-color: var(--oceanblue);
 }
