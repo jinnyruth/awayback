@@ -11,6 +11,20 @@
 
 }
 
+/* forum-regular - latin */
+@font-face {
+  font-family: 'Forum';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../assets/fonts/forum-v16-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../assets/fonts/forum-v16-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../assets/fonts/forum-v16-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../assets/fonts/forum-v16-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../assets/fonts/forum-v16-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../assets/fonts/forum-v16-latin-regular.svg#Forum') format('svg'); /* Legacy iOS */
+}
+
 body {
     background-color: var(--sand);
     background-image: linear-gradient(#fbf7f590, #fbf7f590), url("../assets/img/white-waves.png");
@@ -18,6 +32,7 @@ body {
     background-position: center;
     background-size: cover;
     color: var(--bs-primary);
+    
 }
 .text-primary {
    color: var(--bs-primary) !important;
@@ -39,6 +54,8 @@ body {
 }
 h2{
   margin: 0 0 2rem;
+  font-family: Forum, Georgia, 'Times New Roman', Times, serif;
+  font-size: 2.5em;
 }
 
 header {
@@ -48,13 +65,14 @@ header {
   }
   h1 {
     margin-bottom: 0;
+    font-family: 'Work Sans', sans-serif;
   }
   .logo {
-    width: 80px;
+    width: 50px;
    }
    .site-heading {
     margin: 0;
-    line-height: 1;
+    line-height: .5;
     color: #545454;
    
   }
@@ -72,13 +90,13 @@ header {
 
   .site-heading .site-heading-upper {
     display: block;
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     font-weight: 800;
     margin:0;
     letter-spacing: .1em;
   }
   .site-heading .site-heading-lower {
-    font-size: 1rem;
+    font-size: .75rem;
     font-weight: 800;
     letter-spacing: .66em;
   }
@@ -149,14 +167,46 @@ header {
   .about .about-text {    
     width: 80%;
     float: right;
+    padding: 3rem 300px 3rem 3rem;
   }
 }
  @media (min-width: 1200px) {
   .about .about-text {
-    width: 60%;
+    width: 70%;
+    padding-right: 150px;
+    
   }
   .about .about-img {
     position: absolute;
     right: 0;
+    top: 5em;
   }
+}
+card-text{
+  padding: .5rem;
+  margin: .5rem;
+}
+
+.accordion-button:not(.collapsed) {
+  color: var(--bs-primary);
+  background-color: var(--oceanblue-transparent);
+}
+.accordion-button:focus {
+  border-color: var(--bs-primary);
+}
+
+h4 {
+  margin-top: 2em;
+  font-family: Forum, Georgia, 'Times New Roman', Times, serif;
+}
+.thumbnail {
+  margin: 10px 0;
+}
+
+.card-text{
+  padding: .5rem;
+  margin: .5rem
+}
+.blue-back {
+  background-color: var(--oceanblue);
 }
