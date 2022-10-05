@@ -42,6 +42,13 @@ body {
     background-color: var(--brown);
     border-color: var(--brown);
 }
+
+.btn {
+  color: var(--white);
+  background-color: var(--brown);
+  border-color: var(--brown);
+}
+
 .bg-faded {
     background-color: #fff;
   }
