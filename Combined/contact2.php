@@ -13,6 +13,59 @@
        <script src="https://kit.fontawesome.com/e8ea6126e1.js" crossorigin="anonymous"></script>
     </head>
     <body>
+
+
+    <?php
+		$nameErr = $emailErr = $contBackErr = "";
+		$name = $email = $contBack = $comment = "";
+		$formErr = false;
+
+		if ($_SERVER["REQUEST_METHOD"] == "POST") {
+			
+			if (empty($_POST["name"])) {
+				$nameErr = "Name is required.";
+				$formErr = true;
+			} else {
+				$name = cleanInput($_POST["name"]);
+				//Use REGEX to accept only letters and white spaces
+				if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
+					$nameErr = "Only letters and standard spaces allowed.";
+					$formErr = true;
+				}
+			}
+			
+			if (empty($_POST["email"])) {
+				$emailErr = "Email is required.";
+				$formErr = true;
+			} else {
+				$email = cleanInput($_POST["email"]);
+				// Check if e-mail address is formatted correctly
+				if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+					$emailErr = "Please enter a valid email address.";
+					$formErr = true;
+				}
+			}
+			
+			if (empty($_POST["contact-back"])) {
+				$contBackErr = "Please let us know if we can contact you back.";
+				$formErr = true;
+			} else {
+				$contBack = cleanInput($_POST["contact-back"]);
+			}
+			
+			$comment = cleanInput($_POST["comments"]);
+		}
+
+		function cleanInput($data) {
+			$data = trim($data);
+			$data = stripslashes($data);
+			$data = htmlspecialchars($data);
+			return $data;
+		}
+	?>
+
+
+
         <header>
             <div id="siteTitle" class="col-xl-9 col-log-10 mx-auto  d-flex justify-content-center d-md-none">
             <h1 class="site-heading text-center d-none d-lg-block text-uppercase">
@@ -84,25 +137,43 @@
                                 </div>
                                 <div class="bg-faded rounded about-text">
                                     <h2>Contact Us</h2>
-                                    <form id="contactForm" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+
+                                    <?php if (($_SERVER["REQUEST_METHOD"] == "POST") && (!($formErr))) { ?>
+                                    
+                                    <section id="results" class="blue-back my-2">
+                                        <div class="container py-2" >
+                                            <div class="row">				
+                                                <p>Thanks for contacting us. We will get back to you soon!</p>	
+                                            </div>
+                                        </div>
+                                    </section>
+                                    
+                                    <?php } ?>
+
+                                    <form id="contactForm" form action=<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?> method="POST" novalidate>
                                         
                                         <!-- Name-->
                                         <div class="mb-3">
                                           <label class="form-label" for="name">Your Name</label>
-                                          <input class="form-control" id="name" type="text" placeholder="Full name" data-sb-validations="required" />
+                                          <span class="text-danger">*<?php echo $nameErr; ?></span>
+                                          <input class="form-control" id="name" name="name" type="text" placeholder="Full name" value="<?php if(isset($name)) {echo $name;}?>" />
                                         </div>
                                     
                                         <!-- Email-->
                                         <div class="mb-3">
-                                          <label class="form-label" for="emailAddress">Email Address</label>
-                                          <input class="form-control" id="emailAddress" type="email" placeholder="Email Address" data-sb-validations="required, email" />
+                                          <label class="form-label" for="email">Email Address</label>
+                                          <span class="text-danger">*<?php echo $emailErr; ?></span>
+                                          <input class="form-control" id="email" type="email" placeholder="Email Address" name="email" value="<?php if(isset($email)) {echo $email;} ?>" />
                                         </div>
                                     
                                         <!-- Message-->
                                         <div class="mb-3">
-                                          <label class="form-label" for="message">Message</label>
-                                          <textarea class="form-control" id="message" type="text" placeholder="Message" style="height: 6rem;" data-sb-validations="required"></textarea>
+                                          <label class="form-label" for="comment">Message</label>
+                                          <textarea class="form-control" id="comment" type="text" placeholder="Message" style="height: 6rem;" ><?php if (isset($comment)) {echo $comment;} ?></textarea>
                                         </div>
+
+                                        <!-- Required Fields Note-->
+						<div class="text-danger text-right">* Indicates required fields</div>
                                     
                                         <!-- Submit -->
                                         <div class="d-grid">
@@ -111,12 +182,30 @@
                                     
                                       </form>
                                 </div>
+
+                               
                 
                             </div>
                         </div>
                     </div>
             </div>
                                 </section>
+
+                                <?php if (($_SERVER["REQUEST_METHOD"] == "POST") && (!($formErr))) { 
+                                    $to = "jvalle20@bruinmail.slcc.edu";
+                                    $subject = "A Way Back Counseling Online Form";
+                                    $message = $comment;
+                                    $headers = "From: $email \r\n";
+                                   
+                                    mail($to, $subject, $message, $headers);
+                                }
+                                ?>
+
+
+
+
+
+
         <script>document.getElementById("year").innerHTML = new Date().getFullYear();</script>
         <footer class="footer text-faded bg-faded text-center py-5">
             <div><p class="m-0 small">Copyright &copy;<span id="year"></span> A Way Back Counseling 2022</p></div>
