@@ -11,7 +11,7 @@
        <link href="css/styles.css" rel="stylesheet" />
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-	<script src="https://use.fontawesome.com/3ede89742d.js"></script>
+	<script src="https://kit.fontawesome.com/e8ea6126e1.js" crossorigin="anonymous"></script>
       
     </head>
     <body>
@@ -180,10 +180,9 @@
                                     $headers .= "Reply-To: $email";
                                     
                                     mail($to,$email_subject,$email_body,$headers);
-                                    //redirect to the 'thank you' page
-                                    header('Location: contact-form-thank-you.html');
 
                                     echo('<span class="blue-back p-5 confirmation">Thanks for contacting us, we will get back to you soon!</span>');
+
                                     } ?>
 
 
