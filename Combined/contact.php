@@ -139,16 +139,16 @@
 							<input type="text" class="form-control" id="name" placeholder="Full Name" name="name" value="<?php if(isset($name)) {echo $name;}?>"" />
 							
 						</div>
-						
+
 						<!-- Email Field -->
-						<div class="form-group">
+						<div class="form-group my-3">
 							<label for="email">Email address:</label>
 							<span class="text-danger">*<?php echo $emailErr; ?></span>
 							<input type="email" class="form-control" id="email" placeholder="name@example.com" name="email" value="<?php if(isset($email)) {echo $email;} ?>" />
 						</div>
 										
 						<!-- Comments Field -->
-						<div class="form-group">
+						<div class="form-group my-3">
 							<label for="comments">Comments:</label>
 							<textarea id="comments" class="form-control" rows="3" name="comments"><?php if (isset($comment)) {echo $comment;} ?></textarea>
 						</div>
@@ -170,7 +170,7 @@
                                 </section>
 
                                 <?php if (($_SERVER["REQUEST_METHOD"] == "POST") && (!($formErr))) { 
-                                    $myemail = 'jvalle20@bruinmail.slcc.edu';
+                                    $myemail = 'awaybackcounseling@gmail.com';
                                     $to = $myemail; 
                                     $email_subject = "Contact form submission: $name";
                                     $email_body = "You have received a new message. ".
@@ -183,7 +183,7 @@
                                     //redirect to the 'thank you' page
                                     header('Location: contact-form-thank-you.html');
 
-                                    echo('<span class="blue-back">Thanks for contacting us, we will get back to you soon!</span>');
+                                    echo('<span class="blue-back p-5 confirmation">Thanks for contacting us, we will get back to you soon!</span>');
                                     } ?>
 
 

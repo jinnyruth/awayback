@@ -217,3 +217,9 @@ h4 {
 .blue-back {
   background-color: var(--oceanblue);
 }
+.confirmation {
+  position:fixed;
+  top: 10rem;
+  left: 50%;
+  width: 30rem;
+}
