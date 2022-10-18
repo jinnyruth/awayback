@@ -172,14 +172,14 @@
                                 </section>
 
                                 <?php if (($_SERVER["REQUEST_METHOD"] == "POST") && (!($formErr))) { 
-                                    $myemail = 'awaybackcounseling@gmail.com';
+                                    $myemail = 'jvalle20@bruinmail.slcc.edu';
                                     $to = $myemail; 
                                     $email_subject = "Contact form submission: $name";
                                     $email_body = "You have received a new message. ".
                                     " Here are the details:\n Name: $name \n Email: $email \n Message: \n $comment"; 
                                     
-                                    $headers = "From: 'form@awaybackcounseling.com'\n"; 
-                                    $headers .= "Reply-To: 'form@awaybackcounseling.com'";
+                                    $headers = "From: $myemail\n"; 
+                                    $headers .= "Reply-To: $email";
                                     
                                     mail($to,$email_subject,$email_body,$headers);
 
